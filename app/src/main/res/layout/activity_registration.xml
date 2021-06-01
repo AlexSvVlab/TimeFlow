@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registrationActivity">
+
+
+    <EditText
+        android:id="@+id/mailRegistrationEDT"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="E MAIL"
+        android:inputType="textEmailAddress"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/passwordRegistrationEDT"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mailRegistrationEDT" />
+
+
+    <EditText
+        android:id="@+id/repeatRegistrationEDT"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="REPEAT PASSWORD"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegistrationEDT" />
+
+    <LinearLayout
+        android:id="@+id/container5"
+        android:layout_width="416dp"
+        android:layout_height="61dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/backRegBTN"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:text="back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/createAccRegBTN"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:text="create account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

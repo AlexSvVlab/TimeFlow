@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newIventActivity">
+
+    <EditText
+        android:id="@+id/themeIventEDT"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:hint="THEME"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dateIventEDT"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:hint="DATE"
+        android:inputType="date"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/themeIventEDT" />
+
+    <EditText
+        android:id="@+id/timeStartIventEDT"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="START TIME"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateIventEDT" />
+
+    <EditText
+        android:id="@+id/timeFinishIventEDT"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        android:hint="FINISH TIME"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeStartIventEDT" />
+
+    <LinearLayout
+        android:id="@+id/container5"
+        android:layout_width="416dp"
+        android:layout_height="61dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/backIventBTN"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:text="back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/createNewIventBTN"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:text="create new ivent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
