@@ -32,6 +32,9 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
     Button button, button2, button3;
     static MyDynamicCalendar myCalendar;
+    public static int UsersId = 0;
+    static MyOpenHelper dbHelper;
+    static int EventCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
+
         button.setOnClickListener(v -> {
             Intent intentToLogIn = new Intent(this, loginActivity.class);
             startActivity(intentToLogIn);
@@ -68,18 +72,18 @@ public class MainActivity extends AppCompatActivity {
 
         //Design Calendar View
         myCalendar.setCalendarBackgroundColor("#eeeeee"); //or  myCalendar.setCalendarBackgroundColor(R.color.gray);
-        myCalendar.setHeaderBackgroundColor("#454265");
+        myCalendar.setHeaderBackgroundColor("#4169e1");
         myCalendar.setHeaderTextColor("#ffffff");
-        myCalendar.setNextPreviousIndicatorColor("#245675");
-        myCalendar.setWeekDayLayoutBackgroundColor("#965471");
-        myCalendar.setWeekDayLayoutTextColor("#246245");
-        myCalendar.setExtraDatesOfMonthBackgroundColor("#324568");
-        myCalendar.setExtraDatesOfMonthTextColor("#756325");
-        myCalendar.setDatesOfMonthBackgroundColor("#145687");
-        myCalendar.setDatesOfMonthTextColor("#745632");
+        myCalendar.setNextPreviousIndicatorColor("#6f7b7d");
+        myCalendar.setWeekDayLayoutBackgroundColor("#badbad");
+        myCalendar.setWeekDayLayoutTextColor("#ffffff");
+        myCalendar.setExtraDatesOfMonthBackgroundColor("#4d7198");
+        myCalendar.setExtraDatesOfMonthTextColor("#a7fc00");
+        myCalendar.setDatesOfMonthBackgroundColor("#606e8c");
+        myCalendar.setDatesOfMonthTextColor("#ffffff");
         myCalendar.setCurrentDateBackgroundColor(R.color.black);
-        myCalendar.setCurrentDateTextColor("#00e600");
-        myCalendar.setBelowMonthEventTextColor("#425684");
+        myCalendar.setCurrentDateTextColor("#ff0000");
+        myCalendar.setBelowMonthEventTextColor("#102c54");
         myCalendar.setBelowMonthEventDividerColor("#635478");
 
         //Manage Saturday & Sunday
@@ -92,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
         myCalendar.isSundayOff(true, "#ffffff", "#ff0000");
 
         //Manage Events
-        myCalendar.setEventCellBackgroundColor("#852365");
-        myCalendar.setEventCellTextColor("#425684");
+        myCalendar.setEventCellBackgroundColor("#ca2c92");
+        myCalendar.setEventCellTextColor("#fffff0");
 
         // Add event  -  addEvent(event_date, event_start_time, event_end_time, event_title)
         myCalendar.addEvent("24-5-2021", "8:00", "8:15", "Today Event 1");
@@ -257,7 +261,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     MenuItem monthMenu, agendaMenu;
 
     @Override

@@ -4,11 +4,12 @@
         <item
             android:id="@+id/fn1"
             android:checkable="true"
-            android:checked="true"
+            android:checked="false"
             android:title="Month" />
         <item
             android:id="@+id/fn2"
             android:checkable="true"
+            android:checked="true"
             android:title="Agenda" />
     </group>
 </menu>
